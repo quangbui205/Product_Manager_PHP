@@ -42,4 +42,20 @@ class ProductController
         }
     }
 
+    public function deteleProduct($code)
+    {
+        $this->product->deleteProduct($code);
+        header("location:index.php?page=list-products");
+    }
+
+    public function updateProduct()
+    {
+        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+            $id = $_GET['id'];
+            $product = $this->product->get($id);
+            include "src/view/updateProduct";
+        }else{
+
+        }
+    }
 }

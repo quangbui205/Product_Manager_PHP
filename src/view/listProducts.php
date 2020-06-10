@@ -18,6 +18,8 @@
         <th>Price</th>
         <th>Image</th>
         <th>quantityInStock</th>
+        <th></th>
+        <th></th>
 
     </tr>
     <?php foreach ($products as $key=>$item): ?>
@@ -29,6 +31,8 @@
         <td><?php echo $item['price']?></td>
         <td><?php echo $item['image']?></td>
         <td><?php echo $item['quantityInStock']?></td>
+        <td><a href="index.php?page=delete-product&id=<?php echo $item['productCode']?>">Delete</a></td>
+        <td><a href="index.php?page=update-product&id=<?php echo $item['productCode']?>">Update</a></td>
     </tr>
     <?php endforeach; ?>
 </table>
