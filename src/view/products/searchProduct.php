@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-<table border="1">
+<table class="table table-hover">
+    <thead class="thead-dark">
     <tr>
         <th>productCode</th>
         <th>productName</th>
@@ -19,16 +19,17 @@
         <th>image</th>
         <th>quantityInStock</th>
     </tr>
-    <?php foreach ($products as $key=>$item): ?>
-    <tr>
-        <td><?php echo $item['productCode']?></td>
-        <td><?php echo $item['productName']?></td>
-        <td><?php echo $item['producer']?></td>
-        <td><?php echo $item['description']?></td>
-        <td><?php echo $item['price']?></td>
-        <td><?php echo $item['image']?></td>
-        <td><?php echo $item['quantityInStock']?></td>
-    </tr>
+    </thead>
+    <?php foreach ($products as $key => $item): ?>
+        <tr>
+            <td><?php echo $item['productCode'] ?></td>
+            <td><?php echo $item['productName'] ?></td>
+            <td><?php echo $item['producer'] ?></td>
+            <td><?php echo $item['description'] ?></td>
+            <td><?php echo $item['price'] ?></td>
+            <td><?php echo $item['image'] ?></td>
+            <td><?php echo $item['quantityInStock'] ?></td>
+        </tr>
     <?php endforeach; ?>
 </table>
 

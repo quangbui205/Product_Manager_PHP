@@ -1,4 +1,5 @@
 <?php
+
 namespace File\model;
 
 class DBconnext
@@ -18,7 +19,7 @@ class DBconnext
     {
         try {
             return new \PDO($this->dsn, $this->username, $this->password);
-        }catch (\PDOException $e) {
+        } catch (\PDOException $e) {
             echo $e->getMessage();
             exit();
         }

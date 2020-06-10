@@ -14,9 +14,9 @@ class Product
     protected $image;
     protected $quantityInStock;
 
-    public function __construct($productCode,$productName, $producer, $description, $price, $image, $quantityInStock)
+    public function __construct($productCode, $productName, $producer, $description, $price, $image, $quantityInStock)
     {
-        $this->productCode =$productCode;
+        $this->productCode = $productCode;
         $this->productName = $productName;
         $this->producer = $producer;
         $this->description = $description;
@@ -68,6 +68,7 @@ class Product
     {
         return $this->productCode;
     }
+
     /**
      * @return mixed
      */

@@ -8,7 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-<table border="1">
+<table class="table table-hover">
+    <thead class="thead-dark">
     <tr>
         <th>orderNumber</th>
         <th>orderDate</th>
@@ -17,6 +18,7 @@
         <th>status</th>
         <th>comment</th>
     </tr>
+    </thead>
     <?php foreach ($orders as $key => $item): ?>
         <tr>
             <td><?php echo $item['orderNumber'] ?></td>
@@ -27,9 +29,8 @@
             <td><?php echo $item['comment'] ?></td>
         </tr>
     <?php endforeach; ?>
-    <tr>
-        <th colspan="6"><?php if (empty($orders)) echo "No Data" ?></th>
-    </tr>
+
 </table>
+<?php if (empty($orders)) echo "No Data" ?>
 </body>
 </html>

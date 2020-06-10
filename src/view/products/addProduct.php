@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,21 +9,41 @@
 </head>
 <body>
 <form method="post">
-    <label>productCode:</label>
-    <input type="text" name="productCode" required autofocus><br>
-    <label>productName:</label>
-    <input type="text" name="productName" required autofocus><br>
-    <label>producer:</label>
-    <input type="text" name="producer" required autofocus><br>
-    <label>description:</label>
-    <input type="text" name="description" required autofocus><br>
-    <label>Price:</label>
-    <input type="text" name="price" required autofocus><br>
-    <label>Image:</label>
-    <input type="text" name="image" required autofocus><br>
-    <label>quantityInStock:</label>
-    <input type="text" name="quantityInStock" required autofocus><br>
-    <button type="submit">ADD</button>
+    <table class="table table-hover col-12 col-md-6">
+        <tr>
+    <th>productCode:</th>
+    <td><input type="text" name="productCode" required autofocus class="col-12"></td>
+        </tr>
+        <tr>
+    <th>productName:</th>
+    <td><input type="text" name="productName" required autofocus class="col-12"></td>
+        </tr>
+        <tr>
+    <th>producer:</th>
+    <td><input type="text" name="producer" required autofocus class="col-12"></td>
+        </tr>
+        <tr>
+    <th>description:</th>
+    <td><input type="text" name="description" required autofocus class="col-12"></td>
+        </tr>
+        <tr>
+    <th>Price:</th>
+    <td><input type="text" name="price" required autofocus class="col-12"></td>
+        </tr>
+        <tr>
+    <th>Image:</th>
+    <td><input type="text" name="image" required autofocus class="col-12"></td>
+        </tr>
+        <tr>
+    <th>quantityInStock:</th>
+    <td><input type="text" name="quantityInStock" required autofocus class="col-12"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+    <button type="submit" class="btn btn-success">ADD</button>
+            </td>
+        </tr>
+    </table>
 </form>
 </body>
 </html>

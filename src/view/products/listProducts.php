@@ -10,9 +10,10 @@
 <body>
 <form method="post" action="index.php?page=search-product">
     <input type="text" name="search" placeholder="search with Name">
-    <input type="submit" value="Search">
+    <button type="submit" class="btn btn-secondary">Search</button>
 </form>
-<table border="1">
+<table class="table table-hover">
+    <thead class="thead-dark">
     <tr>
         <th>STT</th>
         <th>productCode</th>
@@ -22,10 +23,9 @@
         <th>Price</th>
         <th>Image</th>
         <th>quantityInStock</th>
-        <th colspan="2"><a href="index.php?page=add-product">ADD product</a></th>
-
-
+        <th colspan="2"><a href="index.php?page=add-product" class="btn btn-success">ADD product</a></th>
     </tr>
+    </thead>
     <?php foreach ($products as $key => $item): ?>
         <tr>
             <td><?php echo ++$key ?></td>
@@ -36,14 +36,13 @@
             <td><?php echo $item['price'] ?></td>
             <td><?php echo $item['image'] ?></td>
             <td><?php echo $item['quantityInStock'] ?></td>
-            <td><a href="index.php?page=delete-product&id=<?php echo $item['productCode'] ?>">Delete</a></td>
-            <td><a href="index.php?page=update-product&id=<?php echo $item['productCode'] ?>">Update</a></td>
+            <td><a href="index.php?page=delete-product&id=<?php echo $item['productCode'] ?>" class="btn btn-danger">Delete</a></td>
+            <td><a href="index.php?page=update-product&id=<?php echo $item['productCode'] ?>" class="btn btn-primary">Update</a></td>
         </tr>
     <?php endforeach; ?>
-    <tr>
-        <th colspan="9"><?php if (empty($products)) echo "No Data" ?></th>
-    </tr>
+
 </table>
+<?php if (empty($products)) echo "No Data" ?>
 
 
 </body>

@@ -8,7 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-<table border="1">
+<table class="table table-hover">
+    <thead class="thead-dark">
     <tr>
         <th>STT</th>
         <th>name</th>
@@ -16,6 +17,7 @@
         <th>email</th>
         <th>address</th>
     </tr>
+    </thead>
     <?php foreach ($customers as $key => $item): ?>
         <tr>
             <td><?php echo ++$key ?></td>
@@ -25,9 +27,8 @@
             <td><?php echo $item['address'] ?></td>
         </tr>
     <?php endforeach; ?>
-    <tr>
-        <th colspan="5"><?php if (empty($customers)) echo "No Data" ?></th>
-    </tr>
+
 </table>
+<?php if (empty($customers)) echo "No Data" ?>
 </body>
 </html>

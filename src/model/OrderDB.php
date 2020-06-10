@@ -1,7 +1,8 @@
 <?php
-namespace File\model;
-use File\model\DBconnext;
 
+namespace File\model;
+
+use File\model\DBconnext;
 
 
 class OrderDB
@@ -14,7 +15,9 @@ class OrderDB
         $this->database = $db->connect();
 
     }
-    public function view(){
+
+    public function view()
+    {
         $sql = "SELECT * FROM orders ";
         $stmt = $this->database->query($sql);
         return $stmt->fetchAll();

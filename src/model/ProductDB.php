@@ -65,15 +65,17 @@ class ProductDB
         $stmt->bindParam(4, $product->getPrice());
         $stmt->bindParam(5, $product->getImage());
         $stmt->bindParam(6, $product->getQuantityInStock());
-        $stmt->bindParam(7,$product->getProductCode());
+        $stmt->bindParam(7, $product->getProductCode());
         $stmt->execute();
     }
-    public function search($key){
-            $sql = "SELECT * FROM `products` WHERE `productName` LIKE :keyword";
-            $stmt = $this->database->prepare($sql);
-            $stmt->bindValue(":keyword", '%' . $key . '%');
-            $stmt->execute();
-            return ($stmt->fetchAll());
-        }
 
+    public function search($key)
+    {
+        $sql = "SELECT * FROM `products` WHERE `productName` LIKE :keyword";
+        $stmt = $this->database->prepare($sql);
+        $stmt->bindValue(":keyword", '%' . $key . '%');
+        $stmt->execute();
+        return ($stmt->fetchAll());
     }
+
+}
