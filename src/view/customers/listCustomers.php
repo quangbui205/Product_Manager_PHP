@@ -25,6 +25,9 @@
             <td><?php echo $item['address'] ?></td>
         </tr>
     <?php endforeach; ?>
+    <tr>
+        <th colspan="5"><?php if (empty($customers)) echo "No Data" ?></th>
+    </tr>
 </table>
 </body>
 </html>

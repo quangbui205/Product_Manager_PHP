@@ -27,6 +27,9 @@
             <td><?php echo $item['comment'] ?></td>
         </tr>
     <?php endforeach; ?>
+    <tr>
+        <th colspan="6"><?php if (empty($orders)) echo "No Data" ?></th>
+    </tr>
 </table>
 </body>
 </html>

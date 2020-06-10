@@ -20,14 +20,14 @@ class ProductController
     {
 
         $products = $this->product->view();
-        include "src/view/listProducts.php";
+        include "src/view/products/listProducts.php";
 
     }
 
     public function addProduct()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-            include "src/view/addProduct.php";
+            include "src/view/products/addProduct.php";
         } else {
             $productCode = $_REQUEST['productCode'];
             $productName = $_REQUEST['productName'];
@@ -53,7 +53,7 @@ class ProductController
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $id = $_GET['id'];
             $product = $this->product->get($id);
-            include "src/view/updateProduct.php";
+            include "src/view/products/updateProduct.php";
         } else {
             $id = $_REQUEST['id'];
             $productName = $_REQUEST['productName'];
@@ -71,14 +71,14 @@ class ProductController
     public function searchProduct()
     {
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
-            include "src/view/searchProduct.php";
+            include "src/view/products/searchProduct.php";
         } else {
             $search = $_POST["search"];
             if (empty($search)) {
                 header("location:index.php?page=list-products");
             } else {
                 $products = $this->product->search($search);
-                include "src/view/searchProduct.php";
+                include "src/view/products/searchProduct.php";
             }
         }
     }

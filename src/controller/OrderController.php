@@ -18,7 +18,7 @@ class OrderController
     public function viewOrder()
     {
         $orders = $this->order->view();
-        include "src/view/listOrders.php";
+        include "src/view/orders/listOrders.php";
     }
 
 }
