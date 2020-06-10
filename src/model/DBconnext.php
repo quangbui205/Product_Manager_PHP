@@ -1,7 +1,7 @@
 <?php
+namespace File\model;
 
-
-class DBConnect
+class DBconnext
 {
     protected $dsn;
     protected $username;
@@ -9,7 +9,7 @@ class DBConnect
 
     public function __construct()
     {
-        $this->dsn = 'mysql:host=localhost;dbname=classicmodels';
+        $this->dsn = 'mysql:host=localhost;dbname=product_manager';
         $this->username = 'root';
         $this->password = 'Anhquan123@';
     }
