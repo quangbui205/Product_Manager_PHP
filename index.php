@@ -3,8 +3,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST['user'];
     $password = $_POST['password'];
     if ($user == "admin" && $password == "admin") {
-        header('location:src/view/menu.php');
-    } else {
+        header('location:src/view/menuAdmin.php');
+    }
+    else {
         echo "Sai mat khau";
     }
 }
@@ -27,6 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="password" name="password"><br>
     <button type="submit" name="login">Login</button>
 </form>
-
+abcfs
 </body>
 </html>

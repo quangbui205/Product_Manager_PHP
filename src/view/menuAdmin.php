@@ -14,9 +14,9 @@ $adminController = new AdminController();
     <title>Document</title>
 </head>
 <body>
-<a href="menu.php?page=list-products">ProductsList</a>
-<a href="menu.php?page=orders-list">OdersList</a>
-<a href="menu.php?page=cutomers-list">CustomersList</a>
+<a href="menuAdmin.php?page=list-products">ProductsList</a>
+<a href="menuAdmin.php?page=orders-list">OdersList</a>
+<a href="menuAdmin.php?page=cutomers-list">CustomersList</a>
 
 <?php
 switch ($page) {
