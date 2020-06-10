@@ -14,9 +14,9 @@ class Product
     protected $image;
     protected $quantityInStock;
 
-    public function __construct($productCode, $productName, $producer, $description, $price, $image, $quantityInStock)
+    public function __construct($productCode,$productName, $producer, $description, $price, $image, $quantityInStock)
     {
-        $this->productCode = $productCode;
+        $this->productCode =$productCode;
         $this->productName = $productName;
         $this->producer = $producer;
         $this->description = $description;
@@ -61,11 +61,13 @@ class Product
     /**
      * @return mixed
      */
+    /**
+     * @return mixed
+     */
     public function getProductCode()
     {
         return $this->productCode;
     }
-
     /**
      * @return mixed
      */
@@ -82,5 +84,11 @@ class Product
         return $this->quantityInStock;
     }
 
-
+    /**
+     * @param mixed $productCode
+     */
+    public function setProductCode($productCode)
+    {
+        $this->productCode = $productCode;
+    }
 }

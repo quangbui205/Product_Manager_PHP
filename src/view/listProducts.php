@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-
+<a href="index.php?page=search-product">Search product</a>
 <table border="1">
     <tr>
         <th>productCode</th>
@@ -18,8 +18,8 @@
         <th>Price</th>
         <th>Image</th>
         <th>quantityInStock</th>
-        <th></th>
-        <th></th>
+        <th colspan="2"><a href="index.php?page=add-product">ADD product</a></th>
+
 
     </tr>
     <?php foreach ($products as $key=>$item): ?>
@@ -35,8 +35,12 @@
         <td><a href="index.php?page=update-product&id=<?php echo $item['productCode']?>">Update</a></td>
     </tr>
     <?php endforeach; ?>
+    <tr>
+        <th colspan="9"><?php if(empty($products)) echo "No Data"?></th>
+    </tr>
 </table>
-<a href="index.php?page=add-product">ADD product</a>
+
+
 </body>
 </html>
 

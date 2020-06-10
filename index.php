@@ -39,8 +39,13 @@ switch ($page) {
     case 'delete-product':
         $code=$_REQUEST['id'];
         $productController->deteleProduct($code);
+        break;
     case 'update-product':
-        $code=$_REQUEST['id'];
+        $productController->updateProduct();
+        break;
+    case 'search-product':
+
+        break;
 }
 ?>
 </body>

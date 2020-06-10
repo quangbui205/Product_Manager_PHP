@@ -53,9 +53,19 @@ class ProductController
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $id = $_GET['id'];
             $product = $this->product->get($id);
-            include "src/view/updateProduct";
-        }else{
-
+            include "src/view/updateProduct.php";
+        } else {
+            $id = $_REQUEST['id'];
+            $productName = $_REQUEST['productName'];
+            $producer = $_REQUEST['producer'];
+            $description = $_REQUEST['description'];
+            $price = $_REQUEST['price'];
+            $image = $_REQUEST['image'];
+            $quantityInStock = $_REQUEST['quantityInStock'];
+            $product = new Product($id, $productName, $producer, $description, $price, $image, $quantityInStock);
+            $this->product->updateProduct($product);
+            header("location:index.php?page=list-products");
         }
     }
+    public function searchProduct(){}
 }

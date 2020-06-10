@@ -46,7 +46,7 @@ class ProductDB
 
     public function get($id)
     {
-        $sql = "SELECT * FROM products WHERE Id= :id";
+        $sql = "SELECT * FROM products WHERE productCode= :id";
         $stmt = $this->database->prepare($sql);
         $stmt->bindParam(":id", $id);
         $stmt->execute();
@@ -54,17 +54,23 @@ class ProductDB
 
     }
 
-    public function updateProduct($product, $id)
+    public function updateProduct($product)
     {
-        $sql = "UPDATE `products` SET productName= :name,producer= :producer,description= :description,price= :price,image= :image,quantityInStock= :quantityInStock WHERE producCode= :id";
+        $sql = "UPDATE `products` SET productName= ?,producer= ?,description= ?,price= ?,image= ?,quantityInStock= ? WHERE productCode = ?";
         $stmt = $this->database->prepare($sql);
-        $stmt->bindParam(":name", $product->getProductName());
-        $stmt->bindParam(":producer", $product->getProductName());
-        $stmt->bindParam(":description", $product->getDescription());
-        $stmt->bindParam(":price", $product->getPrice());
-        $stmt->bindParam(":image", $product->getImage());
-        $stmt->bindParam(":quantityInStock", $product->getQuantityInStock());
-        $stmt->bindParam(":id", $id);
+
+        $stmt->bindParam(1, $product->getProductName());
+        $stmt->bindParam(2, $product->getProducer());
+        $stmt->bindParam(3, $product->getDescription());
+        $stmt->bindParam(4, $product->getPrice());
+        $stmt->bindParam(5, $product->getImage());
+        $stmt->bindParam(6, $product->getQuantityInStock());
+        $stmt->bindParam(7,$product->getProductCode());
         $stmt->execute();
+    }
+    public function searchProduct($id){
+        $sql = "SELECT *FROM product WHERE productCode= $id";
+        $stmt = $this->database->query($sql);
+        return $stmt->fetch();
     }
 }
