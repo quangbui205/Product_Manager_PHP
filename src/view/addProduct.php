@@ -11,20 +11,20 @@
 <body>
 <form method="post">
     <label>productCode:</label>
-    <input type="text" name="productCode"><br>
+    <input type="text" name="productCode" required autofocus><br>
     <label>productName:</label>
-    <input type="text" name="productName"><br>
+    <input type="text" name="productName" required autofocus><br>
     <label>producer:</label>
-    <input type="text" name="producer"><br>
+    <input type="text" name="producer" required autofocus><br>
     <label>description:</label>
-    <input type="text" name="description"><br>
+    <input type="text" name="description" required autofocus><br>
     <label>Price:</label>
-    <input type="text" name="price"><br>
+    <input type="text" name="price" required autofocus><br>
     <label>Image:</label>
-    <input type="text" name="image"><br>
+    <input type="text" name="image" required autofocus><br>
     <label>quantityInStock:</label>
-    <input type="text" name="quantityInStock"><br>
-    <button type="button">ADD</button>
+    <input type="text" name="quantityInStock" required autofocus><br>
+    <button type="submit">ADD</button>
 </form>
 </body>
 </html>

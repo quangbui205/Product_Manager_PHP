@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+
 <table border="1">
     <tr>
         <th>productCode</th>
@@ -17,7 +18,7 @@
         <th>Price</th>
         <th>Image</th>
         <th>quantityInStock</th>
-        <th><a href="index?page=add-product">ADD product</a></th>
+
     </tr>
     <?php foreach ($products as $key=>$item): ?>
     <tr>
@@ -31,6 +32,7 @@
     </tr>
     <?php endforeach; ?>
 </table>
+<a href="index.php?page=add-product">ADD product</a>
 </body>
 </html>
 

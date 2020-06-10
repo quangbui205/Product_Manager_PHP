@@ -20,15 +20,15 @@ class ProductDB
         return $stmt->fetchAll();
     }
     public function creatProduct($product){
-        $sql ="INSERT INTO `products`(`productCode`, `productName`, `producer`, `description`, `price`, `image`, `quantityInStock`) VALUES (:productCode,:productName,:producer,:description,:price,:image,:quantityInStock)";
+        $sql ="INSERT INTO `products`(`productCode`, `productName`, `producer`, `description`, `price`, `image`, `quantityInStock`) VALUES (?,?,?,?,?,?,?)";
         $stmt=$this->database->prepare($sql);
-        $stmt->bindParam(" :productCode",$product->getProductCode());
-        $stmt->bindParam(" :productName",$product->getProductName());
-        $stmt->bindParam(" :producer",$product->getProducer());
-        $stmt->bindParam(" :description",$product->getDescripton());
-        $stmt->bindParam(" :price",$product->getPrice());
-        $stmt->bindParam(" :image",$product->getImage());
-        $stmt->bindParam(" :quantityInStock",$product->QuantityInStock());
+        $stmt->bindParam(1,$product->getProductCode());
+        $stmt->bindParam(2,$product->getProductName());
+        $stmt->bindParam(3,$product->getProducer());
+        $stmt->bindParam(4,$product->getDescription());
+        $stmt->bindParam(5,$product->getPrice());
+        $stmt->bindParam(6,$product->getImage());
+        $stmt->bindParam(7,$product->getQuantityInStock());
         $stmt->execute();
     }
 }

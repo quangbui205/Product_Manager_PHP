@@ -38,7 +38,7 @@ class ProductController
             $quantityInStock = $_REQUEST['quantityInStock'];
             $product = new Product($productCode, $productName, $producer, $description, $price, $image, $quantityInStock);
             $this->product->creatProduct($product);
-            header("localtion:listProducts.php ");
+            header("location:index.php?page=list-products");
         }
     }
 
