@@ -14,7 +14,7 @@ class CustomerDB
         $this->database = $db->connect();
 
     }
-    public function viewCustomer(){
+    public function view(){
         $sql = "SELECT * FROM customers ";
         $stmt = $this->database->query($sql);
         return $stmt->fetchAll();

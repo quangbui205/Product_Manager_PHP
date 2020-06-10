@@ -14,7 +14,7 @@ class OrderDB
         $this->database = $db->connect();
 
     }
-    public function viewOrder(){
+    public function view(){
         $sql = "SELECT * FROM orders ";
         $stmt = $this->database->query($sql);
         return $stmt->fetchAll();

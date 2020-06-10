@@ -1,7 +1,9 @@
 <?php
+
 use File\controller\ProductController;
 use File\controller\OrderController;
 use File\controller\CustomerController;
+
 require_once 'vendor/autoload.php';
 $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
 $productController = new ProductController();
@@ -37,14 +39,11 @@ switch ($page) {
         $productController->addProduct();
         break;
     case 'delete-product':
-        $code=$_REQUEST['id'];
+        $code = $_REQUEST['id'];
         $productController->deteleProduct($code);
         break;
     case 'update-product':
         $productController->updateProduct();
-        break;
-    case 'search-product':
-
         break;
 }
 ?>

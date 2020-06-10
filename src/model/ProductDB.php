@@ -15,14 +15,14 @@ class ProductDB
 
     }
 
-    public function viewProduct()
+    public function view()
     {
         $sql = "SELECT * FROM products ";
         $stmt = $this->database->query($sql);
         return $stmt->fetchAll();
     }
 
-    public function creatProduct($product)
+    public function creat($product)
     {
         $sql = "INSERT INTO `products`(`productCode`, `productName`, `producer`, `description`, `price`, `image`, `quantityInStock`) VALUES (?,?,?,?,?,?,?)";
         $stmt = $this->database->prepare($sql);
@@ -36,7 +36,7 @@ class ProductDB
         $stmt->execute();
     }
 
-    public function deleteProduct($code)
+    public function delete($code)
     {
         $sql = "DELETE FROM products WHERE productCode= :code";
         $stmt = $this->database->prepare($sql);
@@ -54,7 +54,7 @@ class ProductDB
 
     }
 
-    public function updateProduct($product)
+    public function update($product)
     {
         $sql = "UPDATE `products` SET productName= ?,producer= ?,description= ?,price= ?,image= ?,quantityInStock= ? WHERE productCode = ?";
         $stmt = $this->database->prepare($sql);
@@ -68,9 +68,12 @@ class ProductDB
         $stmt->bindParam(7,$product->getProductCode());
         $stmt->execute();
     }
-    public function searchProduct($id){
-        $sql = "SELECT *FROM product WHERE productCode= $id";
-        $stmt = $this->database->query($sql);
-        return $stmt->fetch();
+    public function search($key){
+            $sql = "SELECT * FROM products WHERE productName LIKE :keyword";
+            $stmt = $this->database->prepare($sql);
+            $stmt->bindValue(":keyword", '%' . $key . '%');
+            $stmt->execute();
+            return ($stmt->fetchAll());
+        }
+
     }
-}

@@ -19,7 +19,7 @@ class ProductController
     public function showProduct()
     {
 
-        $products = $this->product->viewProduct();
+        $products = $this->product->view();
         include "src/view/listProducts.php";
 
     }
@@ -37,14 +37,14 @@ class ProductController
             $image = $_REQUEST['image'];
             $quantityInStock = $_REQUEST['quantityInStock'];
             $product = new Product($productCode, $productName, $producer, $description, $price, $image, $quantityInStock);
-            $this->product->creatProduct($product);
+            $this->product->creat($product);
             header("location:index.php?page=list-products");
         }
     }
 
     public function deteleProduct($code)
     {
-        $this->product->deleteProduct($code);
+        $this->product->delete($code);
         header("location:index.php?page=list-products");
     }
 
@@ -63,9 +63,17 @@ class ProductController
             $image = $_REQUEST['image'];
             $quantityInStock = $_REQUEST['quantityInStock'];
             $product = new Product($id, $productName, $producer, $description, $price, $image, $quantityInStock);
-            $this->product->updateProduct($product);
+            $this->product->update($product);
             header("location:index.php?page=list-products");
         }
     }
-    public function searchProduct(){}
+
+    public function searchProduct($key)
+    {
+        if (empty($key)) {
+            header("location:index.php?page=list-products");
+        } else {
+           $products=$this->product->search($key);
+        }
+    }
 }

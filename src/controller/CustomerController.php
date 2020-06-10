@@ -18,7 +18,7 @@ class CustomerController
 
     public function showCustomer()
     {
-        $customers = $this->customer->viewCustomer();
+        $customers = $this->customer->view();
         include "src/view/listCustomers.php";
     }
 

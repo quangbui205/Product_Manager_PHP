@@ -8,7 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-<a href="index.php?page=search-product">Search product</a>
+<form method="get" action="src/view/searchProduct.php">
+    <input type="text" name="search" placeholder="search with Name">
+    <input type="submit" value="Search">
+</form>
 <table border="1">
     <tr>
         <th>productCode</th>
@@ -22,21 +25,21 @@
 
 
     </tr>
-    <?php foreach ($products as $key=>$item): ?>
-    <tr>
-        <td><?php echo $item['productCode']?></td>
-        <td><?php echo $item['productName']?></td>
-        <td><?php echo $item['producer']?></td>
-        <td><?php echo $item['description']?></td>
-        <td><?php echo $item['price']?></td>
-        <td><?php echo $item['image']?></td>
-        <td><?php echo $item['quantityInStock']?></td>
-        <td><a href="index.php?page=delete-product&id=<?php echo $item['productCode']?>">Delete</a></td>
-        <td><a href="index.php?page=update-product&id=<?php echo $item['productCode']?>">Update</a></td>
-    </tr>
+    <?php foreach ($products as $key => $item): ?>
+        <tr>
+            <td><?php echo $item['productCode'] ?></td>
+            <td><?php echo $item['productName'] ?></td>
+            <td><?php echo $item['producer'] ?></td>
+            <td><?php echo $item['description'] ?></td>
+            <td><?php echo $item['price'] ?></td>
+            <td><?php echo $item['image'] ?></td>
+            <td><?php echo $item['quantityInStock'] ?></td>
+            <td><a href="index.php?page=delete-product&id=<?php echo $item['productCode'] ?>">Delete</a></td>
+            <td><a href="index.php?page=update-product&id=<?php echo $item['productCode'] ?>">Update</a></td>
+        </tr>
     <?php endforeach; ?>
     <tr>
-        <th colspan="9"><?php if(empty($products)) echo "No Data"?></th>
+        <th colspan="9"><?php if (empty($products)) echo "No Data" ?></th>
     </tr>
 </table>
 
