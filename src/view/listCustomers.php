@@ -10,7 +10,7 @@
 <body>
 <table border="1">
     <tr>
-        <th>id</th>
+        <th>STT</th>
         <th>name</th>
         <th>phone</th>
         <th>email</th>
@@ -18,7 +18,7 @@
     </tr>
     <?php foreach ($customers as $key => $item): ?>
         <tr>
-            <td><?php echo $item['id'] ?></td>
+            <td><?php echo ++$key ?></td>
             <td><?php echo $item['name'] ?></td>
             <td><?php echo $item['phone'] ?></td>
             <td><?php echo $item['email'] ?></td>

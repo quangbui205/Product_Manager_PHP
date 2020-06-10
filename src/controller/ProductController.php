@@ -16,7 +16,7 @@ class ProductController
 
     }
 
-    public function showProduct()
+    public function viewProduct()
     {
 
         $products = $this->product->view();
@@ -68,12 +68,18 @@ class ProductController
         }
     }
 
-    public function searchProduct($key)
+    public function searchProduct()
     {
-        if (empty($key)) {
-            header("location:index.php?page=list-products");
+        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+            include "src/view/searchProduct.php";
         } else {
-           $products=$this->product->search($key);
+            $search = $_POST["search"];
+            if (empty($search)) {
+                header("location:index.php?page=list-products");
+            } else {
+                $products = $this->product->search($search);
+                include "src/view/searchProduct.php";
+            }
         }
     }
 }

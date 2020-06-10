@@ -16,7 +16,7 @@ class CustomerController
         $this->customer = new CustomerDB();
     }
 
-    public function showCustomer()
+    public function viewCustomer()
     {
         $customers = $this->customer->view();
         include "src/view/listCustomers.php";

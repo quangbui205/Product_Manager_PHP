@@ -27,6 +27,7 @@
         <td><?php echo $item['description']?></td>
         <td><?php echo $item['price']?></td>
         <td><?php echo $item['image']?></td>
+        <td><?php echo $item['quantityInStock']?></td>
     </tr>
     <?php endforeach; ?>
 </table>

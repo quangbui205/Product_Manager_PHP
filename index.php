@@ -27,13 +27,13 @@ $customerController = new CustomerController();
 <?php
 switch ($page) {
     case 'list-products':
-        $productController->showProduct();
+        $productController->viewProduct();
         break;
     case 'orders-list':
-        $orderController->showOrder();
+        $orderController->viewOrder();
         break;
     case 'cutomers-list':
-        $customerController->showCustomer();
+        $customerController->viewCustomer();
         break;
     case 'add-product':
         $productController->addProduct();
@@ -44,6 +44,9 @@ switch ($page) {
         break;
     case 'update-product':
         $productController->updateProduct();
+        break;
+    case 'search-product':
+        $productController->searchProduct();
         break;
 }
 ?>

@@ -15,7 +15,7 @@ class OrderController
 
         $this->order = new OrderDB();
     }
-    public function showOrder()
+    public function viewOrder()
     {
         $orders = $this->order->view();
         include "src/view/listOrders.php";

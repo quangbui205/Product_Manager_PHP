@@ -69,7 +69,7 @@ class ProductDB
         $stmt->execute();
     }
     public function search($key){
-            $sql = "SELECT * FROM products WHERE productName LIKE :keyword";
+            $sql = "SELECT * FROM `products` WHERE `productName` LIKE :keyword";
             $stmt = $this->database->prepare($sql);
             $stmt->bindValue(":keyword", '%' . $key . '%');
             $stmt->execute();

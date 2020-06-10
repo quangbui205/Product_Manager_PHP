@@ -8,12 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-<form method="get" action="src/view/searchProduct.php">
+<form method="post" action="index.php?page=search-product">
     <input type="text" name="search" placeholder="search with Name">
     <input type="submit" value="Search">
 </form>
 <table border="1">
     <tr>
+        <th>STT</th>
         <th>productCode</th>
         <th>productName</th>
         <th>producer</th>
@@ -27,6 +28,7 @@
     </tr>
     <?php foreach ($products as $key => $item): ?>
         <tr>
+            <td><?php echo ++$key ?></td>
             <td><?php echo $item['productCode'] ?></td>
             <td><?php echo $item['productName'] ?></td>
             <td><?php echo $item['producer'] ?></td>
