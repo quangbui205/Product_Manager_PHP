@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<table>
+<table border="1">
     <tr>
         <th>productCode</th>
         <th>productName</th>
@@ -17,6 +17,7 @@
         <th>Price</th>
         <th>Image</th>
         <th>quantityInStock</th>
+        <th><a href="index?page=add-product">ADD product</a></th>
     </tr>
     <?php foreach ($products as $key=>$item): ?>
     <tr>
@@ -24,8 +25,8 @@
         <td><?php echo $item['productName']?></td>
         <td><?php echo $item['producer']?></td>
         <td><?php echo $item['description']?></td>
-        <td><?php echo $item['Price']?></td>
-        <td><?php echo $item['Image']?></td>
+        <td><?php echo $item['price']?></td>
+        <td><?php echo $item['image']?></td>
         <td><?php echo $item['quantityInStock']?></td>
     </tr>
     <?php endforeach; ?>

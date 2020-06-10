@@ -1,22 +1,86 @@
 <?php
 
+
 namespace File\model;
 
-use File\model\DBconnext;
 
 class Product
 {
-    protected $database;
+    protected $productCode;
+    protected $productName;
+    protected $producer;
+    protected $description;
+    protected $price;
+    protected $image;
+    protected $quantityInStock;
 
-    public function __construct()
+    public function __construct($productCode, $productName, $producer, $description, $price, $image, $quantityInStock)
     {
-        $db = new \File\model\DBconnext();
-        $this->database = $db->connect();
+        $this->productCode = $productCode;
+        $this->productName = $productName;
+        $this->producer = $producer;
+        $this->description = $description;
+        $this->price = $price;
+        $this->image = $image;
+        $this->quantityInStock = $quantityInStock;
 
     }
-    public function viewProduct(){
-        $sql = "SELECT * FROM products ";
-        $stmt = $this->database->query($sql);
-        return $stmt->fetchAll();
+
+    /**
+     * @return mixed
+     */
+    public function getProducer()
+    {
+        return $this->producer;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProductCode()
+    {
+        return $this->productCode;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProductName()
+    {
+        return $this->productName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getQuantityInStock()
+    {
+        return $this->quantityInStock;
+    }
+
+
 }

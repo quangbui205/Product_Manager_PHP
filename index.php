@@ -1,15 +1,12 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user = $_POST['user'];
-    $password = $_POST['password'];
-    if ($user == "admin" && $password == "admin") {
-        header('location:src/view/menuAdmin.php');
-    }
-    else {
-        echo "Sai mat khau";
-    }
-}
-
+use File\controller\ProductController;
+use File\controller\OrderController;
+use File\controller\CustomerController;
+require_once 'vendor/autoload.php';
+$page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
+$productController = new ProductController();
+$orderController = new OrderController();
+$customerController = new CustomerController();
 ?>
 <!doctype html>
 <html lang="en">
@@ -21,13 +18,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Document</title>
 </head>
 <body>
-<form method="post">
-    username :
-    <input type="text" name="user"><br>
-    password :
-    <input type="password" name="password"><br>
-    <button type="submit" name="login">Login</button>
-</form>
-abcfs
+<a href="index.php?page=list-products">ProductsList</a>
+<a href="index.php?page=orders-list">OdersList</a>
+<a href="index.php?page=cutomers-list">CustomersList</a>
+
+<?php
+switch ($page) {
+    case 'list-products':
+        $productController->showProduct();
+        break;
+    case 'orders-list':
+        $orderController->showOrder();
+        break;
+    case 'cutomers-list':
+        $customerController->showCustomer();
+        break;
+    case 'add-product':
+        $productController->addProduct();
+        break;
+}
+?>
 </body>
 </html>
