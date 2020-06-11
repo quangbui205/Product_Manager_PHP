@@ -16,7 +16,8 @@
         <th>phone</th>
         <th>email</th>
         <th>address</th>
-        <th></th>
+        <th colspan="2"><a href="index.php?page=add-customer" class="btn btn-success">ADD Customer</a></th>
+
     </tr>
     </thead>
     <?php foreach ($customers as $key => $item): ?>
