@@ -44,7 +44,7 @@ class CustomerController
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $id = $_GET['id'];
             $customer = $this->customer->get($id);
-            include "src/view/products/updateCustomer.php";
+            include "src/view/customers/updateCustomer.php";
         } else {
             $id = $_REQUEST['id'];
             $name = $_REQUEST['name'];
@@ -53,7 +53,7 @@ class CustomerController
             $address = $_REQUEST['address'];
             $customer = new Customer($id, $name, $email, $phone, $address);
             $this->customer->update($customer);
-            header("location:index.php?page=list-products");
+            header("location:index.php?page=list-customers");
         }
     }
 

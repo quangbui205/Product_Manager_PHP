@@ -12,7 +12,7 @@
     <table class="table table-hover col-12 col-md-6">
         <tr>
             <th>ID:</th>
-            <td><input type="text" name="id" required autofocus class="col-12" value="<?php echo $customer['id'] ?>"></td>
+            <td><input type="text" name="id" disabled required autofocus class="col-12" value="<?php echo $customer['id'] ?>"></td>
         </tr>
         <tr>
             <th>Name:</th>
