@@ -22,7 +22,10 @@ class CustomerController
         include "src/view/customers/listCustomers.php";
     }
 
-    public function deleteCus($id){
+
+
+    public function deteleCus($id)
+    {
         $this->customer->delete($id);
         header("location:index.php?page=list-customers");
     }
