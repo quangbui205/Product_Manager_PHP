@@ -20,7 +20,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="index.php?page=list-products">List Product</a>
-                    <a class="dropdown-item" href="index.php?page=orders-list">List Order</a>
+                    <a class="dropdown-item" href="index.php?page=list-orders">List Order</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="index.php?page=list-customers">List Customer</a>
                 </div>

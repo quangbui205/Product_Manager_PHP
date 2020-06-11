@@ -46,15 +46,15 @@ switch ($page) {
     case 'search-product':
         $productController->searchProduct();
         break;
-    case 'orders-list':
+    case 'list-orders':
         $orderController->viewOrder();
         break;
     case 'add-order':
         $orderController->addOrder();
         break;
     case 'delete-customer':
-        $code = $_REQUEST['id'];
-        $customerController->deteleCustomer($code);
+        $id = $_REQUEST['id'];
+        $customerController->deteleCus($id);
         break;
 }
 ?>

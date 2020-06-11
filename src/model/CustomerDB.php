@@ -21,11 +21,11 @@ class CustomerDB
         $stmt = $this->database->query($sql);
         return $stmt->fetchAll();
     }
-    public function delete($code)
+    public function delete($id)
     {
-        $sql = "DELETE FROM customers WHERE id = :code";
+        $sql = "DELETE FROM customers WHERE id = ?";
         $stmt = $this->database->prepare($sql);
-        $stmt->bindParam(":id", $code);
+        $stmt->bindParam(1, $id);
         $stmt->execute();
     }
 }

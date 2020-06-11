@@ -26,7 +26,7 @@
             <td><?php echo $item['phone'] ?></td>
             <td><?php echo $item['email'] ?></td>
             <td><?php echo $item['address'] ?></td>
-            <td><a onclick="return confirm('Do you want DELETE ?');" href="index.php?page=delete-customer&id=<?php echo $item['id'] ?>" class="btn btn-danger">Delete</a></td>
+            <td><a href="index.php?page=delete-customer&id=<?php echo $item['id'] ?>" class="btn btn-danger">Delete</a></td>
         </tr>
     <?php endforeach; ?>
 

@@ -38,7 +38,7 @@ class OrderController
             $id = $_REQUEST['id'];
             $order = new Order($orderNumber, $orderDate, $shippedDate, $requiredDate, $status, $comment,$id);
             $this->order->creat($order);
-            header("location:index.php?page=list-order");
+            header("location:index.php?page=list-orders");
         }
     }
 
