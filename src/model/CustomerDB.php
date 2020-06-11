@@ -40,4 +40,26 @@ class CustomerDB
         $stmt->bindParam(1, $id);
         $stmt->execute();
     }
+
+    public function get($id)
+    {
+        $sql = "SELECT * FROM customers WHERE id= :id";
+        $stmt = $this->database->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+        return $stmt->fetch();
+
+    }
+
+    public function update($customer)
+    {
+        $sql = "UPDATE `customers` SET name= ?, email= ?, phone= ?, address= ? WHERE id = ?";
+        $stmt = $this->database->prepare($sql);
+        $stmt->bindParam(1, $customer->getIewd());
+        $stmt->bindParam(2, $customer->getName());
+        $stmt->bindParam(3, $customer->GetEmail());
+        $stmt->bindParam(4, $customer->GetPhone());
+        $stmt->bindParam(5, $customer->GetAddress());
+        $stmt->execute();
+    }
 }
