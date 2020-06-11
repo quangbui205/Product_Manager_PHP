@@ -42,7 +42,9 @@ class ProductController
             $producer = $_REQUEST['producer'];
             $description = $_REQUEST['description'];
             $price = $_REQUEST['price'];
+
             $image = $_FILES['image']['name'];
+
             $quantityInStock = $_REQUEST['quantityInStock'];
             $product = new Product($productCode, $productName, $producer, $description, $price, $image, $quantityInStock);
             $this->product->creat($product);
