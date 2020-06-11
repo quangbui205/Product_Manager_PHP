@@ -28,6 +28,7 @@
             <td><?php echo $item['email'] ?></td>
             <td><?php echo $item['address'] ?></td>
             <td><a href="index.php?page=delete-customer&id=<?php echo $item['id'] ?>" class="btn btn-danger">Delete</a></td>
+            <td><a href="index.php?page=update-customer&id=<?php echo $item['id'] ?>" class="btn btn-primary">Update</a></td>
         </tr>
     <?php endforeach; ?>
 

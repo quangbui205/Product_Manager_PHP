@@ -58,7 +58,6 @@ class ProductDB
     {
         $sql = "UPDATE `products` SET productName= ?,producer= ?,description= ?,price= ?,image= ?,quantityInStock= ? WHERE productCode = ?";
         $stmt = $this->database->prepare($sql);
-
         $stmt->bindParam(1, $product->getProductName());
         $stmt->bindParam(2, $product->getProducer());
         $stmt->bindParam(3, $product->getDescription());

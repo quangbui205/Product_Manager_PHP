@@ -39,6 +39,25 @@ class CustomerController
         include "src/view/customers/listCustomers.php";
     }
 
+    public function updateCustomer()
+    {
+        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+            $id = $_GET['id'];
+            $customer = $this->customer->get($id);
+            include "src/view/customers/updateCustomer.php";
+        } else {
+            $id = $_REQUEST['id'];
+            $name = $_REQUEST['name'];
+            $email = $_REQUEST['email'];
+            $phone = $_REQUEST['phone'];
+            $address = $_REQUEST['address'];
+            $customer = new Customer($id, $name, $email, $phone, $address);
+            $this->customer->update($customer);
+            header("location:index.php?page=list-customers");
+        }
+    }
+
+
     public function deteleCus($id)
     {
         $this->customer->delete($id);
