@@ -61,6 +61,10 @@ switch ($page) {
         $id = $_REQUEST['id'];
         $customerController->deteleCus($id);
         break;
+    case 'show-product':
+        $id =$_REQUEST['id'];
+        $productController->showProduct();
+        break;
     default :
             $productController->showDesk();
             break;

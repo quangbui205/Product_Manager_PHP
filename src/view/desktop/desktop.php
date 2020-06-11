@@ -9,17 +9,18 @@
 </head>
 <body>
 <form method="post" action="index.php?page=search-product" style="float: right">
-    <input type="text" name="search" size="60" placeholder="search with Name" >
-    <button type="submit" class="btn btn-secondary" >Search</button>
+    <input type="text" name="search" size="60" placeholder="search with Name">
+    <button type="submit" class="btn btn-secondary">Search</button>
 </form>
-<table class="table table-hover" >
+<table class="table table-hover">
     <?php foreach ($products as $key => $item): ?>
         <tr>
-            <td><?php echo $item['productCode'] ?></td>
-            <td><?php echo $item['productName'] ?></td>
+            <td><a href="index.php?page=show-product&id=<?php echo $item['productCode'] ?>">
+            <?php echo $item['productName'] ?>
+            </a></td>
+
             <td><?php echo $item['price'] ?></td>
             <td><?php echo $item['image'] ?></td>
-
         </tr>
     <?php endforeach; ?>
 

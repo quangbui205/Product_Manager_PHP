@@ -27,7 +27,7 @@ class ProductController
     {
 
         $products = $this->product->view();
-        include "src/view/desktop.php";
+        include "src/view/desktop/desktop.php";
 
     }
 
@@ -88,5 +88,9 @@ class ProductController
                 include "src/view/products/searchProduct.php";
             }
         }
+    }
+    public function showProduct($id){
+        $product=$this->product->show($id);
+
     }
 }
