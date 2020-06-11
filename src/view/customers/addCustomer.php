@@ -20,11 +20,11 @@
         </tr>
         <tr>
             <th>Email:</th>
-            <td><input type="text" name="email" required autofocus class="col-12"></td>
+            <td><input type="text" name="phone" required autofocus class="col-12"></td>
         </tr>
         <tr>
             <th>Phone:</th>
-            <td><input type="text" name="phone" required autofocus class="col-12"></td>
+            <td><input type="text" name="email" required autofocus class="col-12"></td>
         </tr>
         <tr>
             <th>Address:</th>

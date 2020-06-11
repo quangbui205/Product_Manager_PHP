@@ -17,12 +17,12 @@ class CustomerDB
 
     public function creat($customer)
     {
-        $sql = "INSERT INTO `customers`(`id`, `name`, `email`, `phone`, `address`) VALUES (?,?,?,?,?)";
+        $sql = "INSERT INTO `customers`(`id`, `name`, `phone`, `email`, `address`) VALUES (?,?,?,?,?)";
         $stmt = $this->database->prepare($sql);
         $stmt->bindParam(1, $customer->getId());
         $stmt->bindParam(2, $customer->getName());
-        $stmt->bindParam(3, $customer->GetEmail());
-        $stmt->bindParam(4, $customer->GetPhone());
+        $stmt->bindParam(3, $customer->GetPhone());
+        $stmt->bindParam(4, $customer->GetEmail());
         $stmt->bindParam(5, $customer->GetAddress());
         $stmt->execute();
     }
@@ -56,8 +56,8 @@ class CustomerDB
         $sql = "UPDATE `customers` SET `name`=?,`phone`=?,`email`=?,`address`=? WHERE `id`=?";
         $stmt = $this->database->prepare($sql);
         $stmt->bindParam(1, $customer->getName());
-        $stmt->bindParam(2, $customer->getEmail());
-        $stmt->bindParam(3, $customer->getPhone());
+        $stmt->bindParam(2, $customer->getPhone());
+        $stmt->bindParam(3, $customer->getEmail());
         $stmt->bindParam(4, $customer->getAddress());
         $stmt->bindParam(5, $customer->getId());
         $stmt->execute();

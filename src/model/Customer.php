@@ -4,16 +4,16 @@ namespace File\model;
 class Customer{
     protected $id;
     protected $name;
-    protected $email;
     protected $phone;
+    protected $email;
     protected $address;
 
-    public function __construct($id, $name, $email, $phone, $address)
+    public function __construct($id, $name, $phone, $email, $address)
     {
         $this->id = $id;
         $this->name = $name;
-        $this->email = $email;
         $this->phone = $phone;
+      $this->email=$email;
         $this->address = $address;
     }
 
