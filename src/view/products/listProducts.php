@@ -8,11 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-<form method="post" action="index.php?page=search-product">
-    <input type="text" name="search" placeholder="search with Name">
-    <button type="submit" class="btn btn-secondary">Search</button>
+<form method="post" action="index.php?page=search-product" style="float: right">
+       <input type="text" name="search" size="60" placeholder="search with Name" >
+     <button type="submit" class="btn btn-secondary" >Search</button>
 </form>
-<table class="table table-hover">
+<table class="table table-hover" >
     <thead class="thead-dark">
     <tr>
         <th>STT</th>
