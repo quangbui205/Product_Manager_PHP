@@ -34,7 +34,17 @@ class ProductController
             $producer = $_REQUEST['producer'];
             $description = $_REQUEST['description'];
             $price = $_REQUEST['price'];
-            $image = $_REQUEST['image'];
+            if (($_FILES['image']['type']!="image/png")
+                &&($_FILES['image']['type']!="image/jpg")
+                &&($_FILES['image']['type']!="image/jpeg"))
+            {
+                echo $message="Not right form";
+            } elseif ($_FILES['image']['size']=='') {
+                echo $message="You must choose file image";
+            } else {
+                $img=$_FILES['image']['name'];
+                $image='images/'.$img;
+                move_uploaded_file($_FILES['image']['tmp_name'],"images/".$img);}
             $quantityInStock = $_REQUEST['quantityInStock'];
             $product = new Product($productCode, $productName, $producer, $description, $price, $image, $quantityInStock);
             $this->product->creat($product);
