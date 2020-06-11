@@ -38,6 +38,9 @@ switch ($page) {
     case 'update-customer':
         $customerController->updateCustomer();
         break;
+    case 'search-customer':
+        $customerController->searchCustomer();
+        break;
     case 'add-product':
         $productController->addProduct();
         break;
@@ -63,7 +66,7 @@ switch ($page) {
         break;
     case 'show-product':
         $id =$_REQUEST['id'];
-        $productController->showProduct();
+        $productController->showProduct($id);
         break;
     default :
             $productController->showDesk();

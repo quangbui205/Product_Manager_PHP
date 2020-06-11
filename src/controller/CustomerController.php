@@ -64,4 +64,19 @@ class CustomerController
         header("location:index.php?page=list-customers");
     }
 
+    public function searchCustomer()
+    {
+        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+            include "src/view/customers/searchCustomer.php";
+        } else {
+            $search = $_POST["search"];
+            if (empty($search)) {
+                header("location:index.php?page=list-customer");
+            } else {
+                $customer = $this->customer->search($search);
+                include "src/view/customers/searchCustomer.php";
+            }
+        }
+    }
+
 }

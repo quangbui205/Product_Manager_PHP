@@ -8,38 +8,27 @@
     <title>Document</title>
 </head>
 <body>
-<form method="post" action="index.php?page=search-customer" style="float: right">
-    <input type="text" name="search" size="60px" placeholder="search with Name">
-    <button type="submit" class="btn btn-secondary">Search</button>
-</form>
-
 <table class="table table-hover">
     <thead class="thead-dark">
     <tr>
-        <th>STT</th>
-        <th>ID</th>
+        <th>id</th>
         <th>name</th>
         <th>phone</th>
         <th>email</th>
         <th>address</th>
-        <th colspan="2"><a href="index.php?page=add-customer" class="btn btn-success">ADD Customer</a></th>
-
     </tr>
     </thead>
-    <?php foreach ($customers as $key => $item): ?>
+    <?php foreach ($customer as $key => $item): ?>
         <tr>
-            <td><?php echo ++$key ?></td>
             <td><?php echo $item['id'] ?></td>
             <td><?php echo $item['name'] ?></td>
             <td><?php echo $item['phone'] ?></td>
             <td><?php echo $item['email'] ?></td>
             <td><?php echo $item['address'] ?></td>
-            <td><a href="index.php?page=delete-customer&id=<?php echo $item['id'] ?>" class="btn btn-danger">Delete</a></td>
-            <td><a href="index.php?page=update-customer&id=<?php echo $item['id'] ?>" class="btn btn-primary">Update</a></td>
         </tr>
     <?php endforeach; ?>
-
 </table>
-<?php if (empty($customers)) echo "No Data" ?>
+
 </body>
 </html>
+
