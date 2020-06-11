@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <table class="table table-hover col-12 col-md-6">
         <tr>
     <th>productCode:</th>
@@ -32,7 +32,7 @@
         </tr>
         <tr>
     <th>Image:</th>
-    <td><input type="text" name="image" required autofocus class="col-12"></td>
+    <td><input type="file" name="image" required autofocus class="col-12"></td>
         </tr>
         <tr>
     <th>quantityInStock:</th>

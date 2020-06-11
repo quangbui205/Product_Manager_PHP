@@ -62,4 +62,13 @@ class CustomerDB
         $stmt->bindParam(5, $customer->getId());
         $stmt->execute();
     }
+
+    public function search($key)
+    {
+        $sql = "SELECT * FROM `customers` WHERE `name` LIKE :keyword";
+        $stmt = $this->database->prepare($sql);
+        $stmt->bindValue(":keyword", '%' . $key . '%');
+        $stmt->execute();
+        return ($stmt->fetchAll());
+    }
 }
