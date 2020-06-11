@@ -51,7 +51,10 @@ class ProductController
             } else {
                 $img=$_FILES['image']['name'];
                 $image='images/'.$img;
+
+       
                 move_uploaded_file($_FILES['image']['tmp_name'],"images/".$img);}
+
             $quantityInStock = $_REQUEST['quantityInStock'];
             $product = new Product($productCode, $productName, $producer, $description, $price, $image, $quantityInStock);
             $this->product->creat($product);
@@ -101,6 +104,6 @@ class ProductController
     }
     public function showProduct($id){
         $product=$this->product->show($id);
-
+        include "src/view/desktop/showProduct.php";
     }
 }

@@ -67,7 +67,7 @@ switch ($page) {
 
     case 'show-product':
         $id =$_REQUEST['id'];
-        $productController->showProduct();
+        $productController->showProduct($id);
         break;
     default :
             $productController->showDesk();
