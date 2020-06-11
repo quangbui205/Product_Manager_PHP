@@ -38,6 +38,9 @@ switch ($page) {
     case 'update-customer':
         $customerController->updateCustomer();
         break;
+    case 'search-customer':
+        $customerController->searchCustomer();
+        break;
     case 'add-product':
         $productController->addProduct();
         break;
@@ -61,6 +64,9 @@ switch ($page) {
         $id = $_REQUEST['id'];
         $customerController->deteleCus($id);
         break;
+    default:
+            $productController->viewProduct();
+            break;
 }
 ?>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
