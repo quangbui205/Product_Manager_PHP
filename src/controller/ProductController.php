@@ -23,6 +23,13 @@ class ProductController
         include "src/view/products/listProducts.php";
 
     }
+    public function showDesk()
+    {
+
+        $products = $this->product->view();
+        include "src/view/desktop/desktop.php";
+
+    }
 
     public function addProduct()
     {
@@ -91,5 +98,9 @@ class ProductController
                 include "src/view/products/searchProduct.php";
             }
         }
+    }
+    public function showProduct($id){
+        $product=$this->product->show($id);
+
     }
 }

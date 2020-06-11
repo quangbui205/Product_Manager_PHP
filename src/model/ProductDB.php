@@ -76,5 +76,10 @@ class ProductDB
         $stmt->execute();
         return ($stmt->fetchAll());
     }
+    public function show($id){
+        $sql="SELECT * FROM `products` WHERE `productCode`=$id";
+        $stmt=$this->database->query($sql);
+        return $stmt->fetch();
+    }
 
 }
