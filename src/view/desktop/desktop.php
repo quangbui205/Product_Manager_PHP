@@ -9,7 +9,7 @@
 </head>
 <body>
 <form method="post" action="index.php?page=search-product" style="float: right">
-    <input type="text" name="search" size="60" placeholder="search with Name">
+    <input type="text" name="search" size="40" placeholder="search with Name">
     <button type="submit" class="btn btn-secondary">Search</button>
 </form>
 <table class="table table-hover">
@@ -20,7 +20,7 @@
             </a></td>
 
             <td><?php echo $item['price'] ?></td>
-            <td><?php echo $item['image'] ?></td>
+            <td><img style="width: 90px" src="src/view/images/<?php echo $item['image'] ?>"></td>
         </tr>
     <?php endforeach; ?>
 

@@ -29,6 +29,9 @@
         <th>Giá sản phẩm   </th>
         <td><?php echo $product['price']?></td>
     </tr>
+    <tr >
+        <td colspan="2" rowspan="2"><img class="img-fluid img-thumbnail" src="src/view/images/<?php echo $product['image'] ?>"></td>
+    </tr>
 </table>
 </body>
 </html>
