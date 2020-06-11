@@ -12,6 +12,7 @@
     <thead class="thead-dark">
     <tr>
         <th>STT</th>
+        <th>ID</th>
         <th>name</th>
         <th>phone</th>
         <th>email</th>
@@ -23,6 +24,7 @@
     <?php foreach ($customers as $key => $item): ?>
         <tr>
             <td><?php echo ++$key ?></td>
+            <td><?php echo $item['id'] ?></td>
             <td><?php echo $item['name'] ?></td>
             <td><?php echo $item['phone'] ?></td>
             <td><?php echo $item['email'] ?></td>

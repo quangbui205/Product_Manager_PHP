@@ -24,10 +24,10 @@ class CustomerController
         } else {
             $id = $_REQUEST['id'];
             $name = $_REQUEST['name'];
-            $email = $_REQUEST['email'];
             $phone = $_REQUEST['phone'];
+            $email = $_REQUEST['email'];
             $address = $_REQUEST['address'];
-            $customer = new Customer($id, $name, $email, $phone, $address);
+            $customer = new Customer($id, $name, $phone, $email, $address);
             $this->customer->creat($customer);
             header("location:index.php?page=list-customers");
         }
@@ -48,10 +48,10 @@ class CustomerController
         } else {
             $id = $_REQUEST['id'];
             $name = $_REQUEST['name'];
-            $email = $_REQUEST['email'];
             $phone = $_REQUEST['phone'];
+            $email = $_REQUEST['email'];
             $address = $_REQUEST['address'];
-            $customer = new Customer($id, $name, $email, $phone, $address);
+            $customer = new Customer($id, $name, $phone, $email, $address);
             $this->customer->update($customer);
             header("location:index.php?page=list-customers");
         }

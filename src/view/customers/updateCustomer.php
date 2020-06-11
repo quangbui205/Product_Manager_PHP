@@ -19,12 +19,12 @@
             <td><input type="text" name="name" required autofocus class="col-12" value="<?php echo $customer['name'] ?>"></td>
         </tr>
         <tr>
-            <th>Email:</th>
-            <td><input type="text" name="email" required autofocus class="col-12" value="<?php echo $customer['email'] ?>"></td>
-        </tr>
-        <tr>
             <th>Phone:</th>
             <td><input type="text" name="phone" required autofocus class="col-12" value="<?php echo $customer['phone'] ?>"></td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td><input type="text" name="email" required autofocus class="col-12" value="<?php echo $customer['email'] ?>"></td>
         </tr>
         <tr>
             <th>Address:</th>
