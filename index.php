@@ -30,7 +30,7 @@ switch ($page) {
         $productController->viewProduct();
         break;
 
-    case 'cutomers-list':
+    case 'list-customers':
         $customerController->viewCustomer();
         break;
     case 'add-product':
@@ -48,6 +48,13 @@ switch ($page) {
         break;
     case 'orders-list':
         $orderController->viewOrder();
+        break;
+    case 'add-order':
+        $orderController->addOrder();
+        break;
+    case 'delete-customer':
+        $code = $_REQUEST['id'];
+        $customerController->deteleCustomer($code);
         break;
 }
 ?>

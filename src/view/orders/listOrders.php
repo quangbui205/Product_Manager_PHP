@@ -17,6 +17,8 @@
         <th>requiredDate</th>
         <th>status</th>
         <th>comment</th>
+        <th>idCustomer</th>
+        <th colspan="2"><a href="index.php?page=add-order" class="btn btn-success">ADD order</a></th>
     </tr>
     </thead>
     <?php foreach ($orders as $key => $item): ?>
@@ -27,6 +29,7 @@
             <td><?php echo $item['requiredDate'] ?></td>
             <td><?php echo $item['status'] ?></td>
             <td><?php echo $item['comment'] ?></td>
+            <td><?php echo $item['id'] ?> </td>
         </tr>
     <?php endforeach; ?>
 

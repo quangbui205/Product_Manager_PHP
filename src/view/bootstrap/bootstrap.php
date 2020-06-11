@@ -22,7 +22,7 @@
                     <a class="dropdown-item" href="index.php?page=list-products">List Product</a>
                     <a class="dropdown-item" href="index.php?page=orders-list">List Order</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="index.php?page=cutomers-list">List Customer</a>
+                    <a class="dropdown-item" href="index.php?page=list-customers">List Customer</a>
                 </div>
             </li>
             <li class="nav-item">

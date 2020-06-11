@@ -16,6 +16,7 @@
         <th>phone</th>
         <th>email</th>
         <th>address</th>
+        <th></th>
     </tr>
     </thead>
     <?php foreach ($customers as $key => $item): ?>
@@ -25,6 +26,7 @@
             <td><?php echo $item['phone'] ?></td>
             <td><?php echo $item['email'] ?></td>
             <td><?php echo $item['address'] ?></td>
+            <td><a onclick="return confirm('Do you want DELETE ?');" href="index.php?page=delete-customer&id=<?php echo $item['id'] ?>" class="btn btn-danger">Delete</a></td>
         </tr>
     <?php endforeach; ?>
 
