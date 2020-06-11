@@ -38,6 +38,9 @@ switch ($page) {
     case 'update-customer':
         $customerController->updateCustomer();
         break;
+    case 'search-customer':
+        $customerController->searchCustomer();
+        break;
     case 'add-product':
         $productController->addProduct();
         break;
