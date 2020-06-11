@@ -57,6 +57,7 @@ class CustomerController
         }
     }
 
+
     public function deteleCus($id)
     {
         $this->customer->delete($id);
