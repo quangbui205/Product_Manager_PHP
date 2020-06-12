@@ -1,41 +1,32 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
 <body>
 <form method="post" enctype="multipart/form-data">
     <table class="table table-hover col-12 col-md-6">
         <tr>
-    <th>productCode:</th>
+    <th>Mã sản phẩm :</th>
     <td><input type="text" name="productCode" required autofocus class="col-12"></td>
         </tr>
         <tr>
-    <th>productName:</th>
+    <th>Tên sản phẩm :</th>
     <td><input type="text" name="productName" required autofocus class="col-12"></td>
         </tr>
         <tr>
-    <th>producer:</th>
+    <th>Nhà cung cấp :</th>
     <td><input type="text" name="producer" required autofocus class="col-12"></td>
         </tr>
         <tr>
-    <th>description:</th>
+    <th>Mô tả :</th>
     <td><input type="text" name="description" required autofocus class="col-12"></td>
         </tr>
         <tr>
-    <th>Price:</th>
+    <th>Giá :</th>
     <td><input type="text" name="price" required autofocus class="col-12"></td>
         </tr>
         <tr>
-    <th>Image:</th>
+    <th>Hình ảnh:</th>
     <td><input type="file" name="image" required autofocus class="col-12"></td>
         </tr>
         <tr>
-    <th>quantityInStock:</th>
+    <th>Số lượng tồn kho :</th>
     <td><input type="text" name="quantityInStock" required autofocus class="col-12"></td>
         </tr>
         <tr>
