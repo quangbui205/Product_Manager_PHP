@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['userLogin'])) {
-    header('location: src/view/login.php');
+    header('location: src/view/login/login.php');
 }
 use File\controller\ProductController;
 use File\controller\OrderController;
@@ -24,6 +24,7 @@ $customerController = new CustomerController();
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
+<div class="container">
 <?php include "src/view/bootstrap/bootstrap.php" ?>
 
 <?php
@@ -78,6 +79,7 @@ switch ($page) {
             break;
 }
 ?>
+</div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
