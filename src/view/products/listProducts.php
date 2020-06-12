@@ -10,7 +10,9 @@
 <body>
 <form method="post" action="index.php?page=search-product" style="float: right">
 
+
     <input type="text" name="search" size="30px" placeholder="search with Name">
+
     <button type="submit" class="btn btn-secondary">Search</button>
 
 </form>
@@ -36,7 +38,9 @@
             <td><?php echo $item['producer'] ?></td>
             <td><?php echo $item['description'] ?></td>
             <td><?php echo $item['price'] ?></td>
+
             <td><img style="width: 90px" src="src/view/images/<?php echo $item['image'] ?>"></td>
+
             <td><?php echo $item['quantityInStock'] ?></td>
             <td><a href="index.php?page=delete-product&id=<?php echo $item['productCode'] ?>" class="btn btn-danger">Delete</a></td>
             <td><a href="index.php?page=update-product&id=<?php echo $item['productCode'] ?>" class="btn btn-primary">Update</a></td>
