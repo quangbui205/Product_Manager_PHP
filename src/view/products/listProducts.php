@@ -10,7 +10,7 @@
 <body>
 <form method="post" action="index.php?page=search-product" style="float: right">
 
-    <input type="text" name="search" size="40px" placeholder="search with Name">
+    <input type="text" name="search" size="30px" placeholder="search with Name">
     <button type="submit" class="btn btn-secondary">Search</button>
 
 </form>

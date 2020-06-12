@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION['userLogin'])) {
+    header('location: src/view/login.php');
+}
 use File\controller\ProductController;
 use File\controller\OrderController;
 use File\controller\CustomerController;
@@ -23,6 +27,7 @@ $customerController = new CustomerController();
 <?php include "src/view/bootstrap/bootstrap.php" ?>
 
 <?php
+
 switch ($page) {
     case 'add-customer':
         $customerController->addCustomer();

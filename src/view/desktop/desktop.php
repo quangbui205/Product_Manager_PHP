@@ -9,7 +9,7 @@
 </head>
 <body>
 <form method="post" action="index.php?page=search-product" style="float: right">
-    <input type="text" name="search" size="40" placeholder="search with Name">
+    <input type="text" name="search" size="30" placeholder="search with Name">
     <button type="submit" class="btn btn-secondary">Search</button>
 </form>
 <table class="table table-hover">
