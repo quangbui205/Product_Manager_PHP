@@ -9,7 +9,7 @@
         <th>Mô tả</th>
         <th>Giá </th>
         <th>Hình ảnh</th>
-        <th>Số lượng tồn kho </th>
+
     </tr>
     </thead>
     <?php foreach ($products as $key => $item): ?>
@@ -20,7 +20,6 @@
             <td><?php echo $item['description'] ?></td>
             <td><?php echo $item['price'] ?></td>
             <td><img style="width: 90px" src="src/view/images/<?php echo $item['image'] ?>"></td>
-            <td><?php echo $item['quantityInStock'] ?></td>
         </tr>
     <?php endforeach; ?>
 </table>

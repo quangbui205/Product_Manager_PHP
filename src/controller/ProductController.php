@@ -91,6 +91,22 @@ class ProductController
         }
     }
 
+    public function searchDesk()
+    {
+        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+            include "src/view/desktop/search.php";
+        } else {
+            $search = $_POST["search"];
+            if (empty($search)) {
+                header("location:index.php?page=list-products");
+            } else {
+                $products = $this->product->search($search);
+                include "src/view/desktop/search.php";
+            }
+        }
+    }
+
+
     public function showProduct($id)
     {
         $product = $this->product->show($id);

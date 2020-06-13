@@ -32,7 +32,7 @@ class OrderController
             $orderNumber = $_REQUEST['orderNumber'];
             $orderDate = $_REQUEST['orderDate'];
             $shippedDate = $_REQUEST['shippedDate'];
-            $requiredDate = $_REQUEST['requiredDate	'];
+            $requiredDate = $_REQUEST['requiredDate'];
             $status = $_REQUEST['status'];
             $comment = $_REQUEST['comment'];
             $id = $_REQUEST['id'];
