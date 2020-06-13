@@ -73,6 +73,9 @@ switch ($page) {
         $id =$_REQUEST['id'];
         $productController->showProduct($id);
         break;
+    case 'search':
+        $productController->searchDesk();
+        break;
     default :
             $productController->showDesk();
     

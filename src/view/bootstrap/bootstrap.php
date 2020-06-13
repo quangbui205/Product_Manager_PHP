@@ -30,7 +30,7 @@
 
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="src/view/login/logout.php">Logout <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="src/view/login/logout.php">Đăng xuất<span class="sr-only">(current)</span></a>
             </li>
 
         </ul>
