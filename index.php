@@ -1,8 +1,6 @@
 <?php
-session_start();
-if (!isset($_SESSION['userLogin'])) {
-    header('location: src/view/login/login.php');
-}
+//session_start();
+
 use File\controller\ProductController;
 use File\controller\OrderController;
 use File\controller\CustomerController;
@@ -22,6 +20,7 @@ $customerController = new CustomerController();
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="css/home-page.css">
 </head>
 <body>
 <div class="container">

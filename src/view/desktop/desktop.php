@@ -26,9 +26,11 @@
                     <td><a href="index.php?page=show-product&id=<?php echo $item['productCode'] ?>">
                             <?php echo $item['productName'] ?>
                         </a></td>
-
                     <td><?php echo $item['price'] ?></td>
-                    <td><img style="width: 90px" src="src/view/images/<?php echo $item['image'] ?>"></td>
+                    <td><a href="index.php?page=show-product&id=<?php echo $item['productCode'] ?>">
+                            <img style="width: 90px" src="src/view/images/<?php echo $item['image'] ?>">
+                        </a></td>
+
                 </tr>
             <?php endforeach; ?>
 
@@ -37,7 +39,3 @@
     </div>
 </div>
 </body>
-
-
-
-
