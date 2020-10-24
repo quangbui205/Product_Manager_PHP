@@ -10,9 +10,9 @@ class DBconnext
 
     public function __construct()
     {
-        $this->dsn = 'mysql:host=localhost;dbname=product_manager';
+        $this->dsn = 'mysql:host=localhost;dbname=productManager';
         $this->username = 'root';
-        $this->password = 'Anhquan123@';
+        $this->password = 'Quang@123';
     }
 
     public function connect()
